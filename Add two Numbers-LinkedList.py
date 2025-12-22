@@ -1,25 +1,25 @@
-** class Solution: **
-**    def addTwoNumbers(self, l1, l2):**
-**        h = ListNode(0)**
-**        t = h**
-**        c = 0**
+class Solution:
+    def addTwoNumbers(self, l1, l2):
+        h = ListNode(0)
+        t = h
+        c = 0
 
-**        while l1 or l2 or c:**
-**            if l1:**
-**                c += l1.val**
-**                l1 = l1.next**
-**            if l2:**
-**                c += l2.val**
-**                l2 = l2.next**
+        while l1 or l2 or c:
+            if l1:
+                c += l1.val
+                l1 = l1.next
+            if l2:
+                c += l2.val
+                l2 = l2.next
 
-**            t.next = ListNode(c % 10)**
-**            t = t.next**
-**            c //= 10**
+            t.next = ListNode(c % 10)
+            t = t.next
+            c //= 10
 
-**        return h.next**
+        return h.next
 
 
-
+EXPLANATION:
 
 # Definition for singly-linked list.
 # A ListNode stores:
